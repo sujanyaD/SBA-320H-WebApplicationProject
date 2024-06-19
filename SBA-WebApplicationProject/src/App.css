@@ -1,42 +1,217 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+h1,h2,h3,h4{
+  color:burlywood;
+}
+.App{
+  position: relative;
+  /* background: linear-gradient(rgb(0 0 0 / 92%), rgb(0 0 0 / 77%)); */
+  background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(221,25,71,0.8457884374452906) 100%);
+  height: 100vh;
+}
+.title{
   text-align: center;
+  font-size: 4rem;
+  color:lemonchiffon;
+  font-family: cursive;
+}
+.search--form>.search--bar{
+  width: 100%;
+  padding: 1rem;
+  background: transparent;
+  color: #000000;
+  border: none;
+  outline-width: 0;
+}
+.search--form>.search--btn{
+  width: 35px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.search--form > .search--btn img{
+  width: 100%;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.books{
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.books--item{
+  cursor: pointer;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.BookImg {
+  width: 160px;
+  transition: 350ms ease-in-out;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.book--item:hover .BookImg {
+  transform: scale(1.1);
+}
+
+.preview--btn {
+  position: absolute;
+  overflow: hidden;
+  background-color: rgb(209, 255, 6);
+  color: #000;
+  padding: 0.5rem 2rem;
+  margin-top: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  font-weight: 600;
+  transition: background-color 250ms ease;
+  cursor: pointer;
+}
+
+.read--btn {
+  position: absolute;
+  background-color: rgb(255, 118, 6);
+  color: #020202;
+  padding: 0.6rem 1rem;
+  margin-top: 5rem;
+  margin-left: 10px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: 250ms ease;
+  cursor: pointer;
+}
+.null--point {
+  position: absolute;
+  color: #f0f0f0;
+  margin-top: 5rem;
+  margin-left: 16px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.preview--btn::after {
+  content: "";
+  position: absolute;
+  background-color: darkmagenta;
+  width: 16px;
+  height: 98px;
+  transform: skew(-36deg, 0);
+  top: 0;
+  left: -5px;
+}
+
+.preview--btn:hover {
+  background-color: yellowgreen;
+}
+
+.close--btn {
+  position: absolute;
+  background: red;
+  color: white;
+  border: none;
+  font-size: 1.4rem;
+  border-radius: 50px;
+  outline: 0;
+
+  height: 30px;
+  width: 30px;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.reading--block {
+  position: absolute;
+  background: rgba(13, 13, 13, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(17px);
+  -webkit-backdrop-filter: blur(17px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  width: 100%;
+  height: 100%;
+  top: 0;
+  border: 0;
+}
+
+.iframe {
+  position: absolute;
+  width: 560px;
+  height: 500px;
+  left: 0;
+  right: 0;
+  top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 582px) {
+  .BookImg {
+    width: 125px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .preview--btn,
+  .read--btn {
+    padding: 12px 16px;
+  }
+
+  .read--btn {
+    margin-left: 0;
+  }
+
+  .iframe {
+    width: 430px;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (max-width: 472px) {
+  .App {
+    height: auto;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  .search--form {
+    width: 280px;
+  }
 
-.read-the-docs {
-  color: #888;
+  .books {
+    flex-direction: column;
+  }
+
+  .book--item {
+    margin-bottom: 27px;
+  }
+
+  .BookImg {
+    width: 200px;
+  }
+
+  .book--item-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .preview--btn,
+  .read--btn,
+  .null--point {
+    position: relative;
+    margin-top: 10px;
+  }
+
+  .iframe {
+    width: 100%;
+  }
 }
