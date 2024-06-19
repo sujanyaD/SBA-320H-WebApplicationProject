@@ -1,28 +1,47 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-a{
+
+a {
   text-decoration: none;
 }
+
 h1,h2,h3,h4{
-  color:burlywood;
+  color: #fff;
+  margin-top: 55px;
+
 }
-.App{
+
+.App {
+  background-image: url('./images/bookbackground.jpg');
+
   position: relative;
-  /* background: linear-gradient(rgb(0 0 0 / 92%), rgb(0 0 0 / 77%)); */
-  background: rgb(34,193,195);
-background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(221,25,71,0.8457884374452906) 100%);
+  size: auto;
+  background:  linear-gradient(-45deg, #FFA69E 0%, #5D4954 100% );
   height: 100vh;
 }
-.title{
+
+.title {
   text-align: center;
   font-size: 4rem;
-  color:lemonchiffon;
+  color: rgb(233, 232, 232);
   font-family: cursive;
 }
-.search--form>.search--bar{
+
+.search--form {
+  width: 400px;
+  margin: 10px auto 0;
+  padding: 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 999px;
+}
+
+.search--form > .search--bar {
   width: 100%;
   padding: 1rem;
   background: transparent;
@@ -30,17 +49,19 @@ background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(221,25,71,0.845788
   border: none;
   outline-width: 0;
 }
-.search--form>.search--btn{
+
+.search--form > .search--btn {
   width: 35px;
   background: transparent;
   border: none;
   cursor: pointer;
 }
-.search--form > .search--btn img{
+
+.search--form > .search--btn img {
   width: 100%;
 }
 
-.books{
+.books {
   width: 90%;
   margin: 0 auto;
   padding-top: 3rem;
@@ -48,9 +69,11 @@ background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(221,25,71,0.845788
   justify-content: space-evenly;
   align-items: center;
 }
-.books--item{
+
+.book--item {
   cursor: pointer;
 }
+
 .BookImg {
   width: 160px;
   transition: 350ms ease-in-out;
@@ -92,6 +115,7 @@ background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(221,25,71,0.845788
   transition: 250ms ease;
   cursor: pointer;
 }
+
 .null--point {
   position: absolute;
   color: #f0f0f0;
@@ -101,10 +125,11 @@ background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(221,25,71,0.845788
   text-transform: uppercase;
   font-weight: 600;
 }
+
 .preview--btn::after {
   content: "";
   position: absolute;
-  background-color: darkmagenta;
+  background-color: #ff0000dc;
   width: 16px;
   height: 98px;
   transform: skew(-36deg, 0);
