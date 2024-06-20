@@ -15,7 +15,6 @@ h1,h3,h4{
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin-left: 100px;
   
-  
 }
 h2{
   color:indianred;
@@ -25,18 +24,17 @@ h2{
   margin-left: 550px;
   font-style: italic;
   
-  
 }
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-image: url('./images/bookbackground.jpg'); /* Replace with your image path */
-  background-size: cover; /* Cover the entire viewport */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* No repeat */
-  height: 60vh; /* Ensure the background covers the entire viewport height */
-  overflow-x: hidden; /* Optional: Hide horizontal overflow */
+  background-image: url('./images/bookbackground.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  height: 60vh; 
+  overflow-x: hidden; 
 }
 
 .title {
@@ -71,7 +69,7 @@ body {
   width: 35px;
   background: transparent;
   border: none;
-  cursor: pointer;
+  cursor:pointer;
 }
 
 .search--form > .search--btn img {
@@ -132,7 +130,6 @@ body {
   transition: 250ms ease;
   cursor: pointer;
 }
-
 .null--point {
   position: absolute;
   color: #f0f0f0;
@@ -142,13 +139,9 @@ body {
   text-transform: uppercase;
   font-weight: 600;
 }
-
-/*  */
-
 .preview--btn:hover {
   background-color:darkred;
 }
-
 .close--btn {
   position: absolute;
   background: red;
@@ -182,8 +175,8 @@ body {
 
 .iframe {
   position: absolute;
-  width: 560px;
-  height: 500px;
+  width: 700px;
+  height: 600px;
   left: 0;
   right: 0;
   top: 40px;

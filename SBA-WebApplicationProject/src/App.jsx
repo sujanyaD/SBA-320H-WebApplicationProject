@@ -1,16 +1,18 @@
 
-
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import Books from './components/books';
 import SearchBooks from './components/searchBooks';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
   const [search, setSearch] = useState('');
   const [query, setQuery] = useState('java');
   const [books, setBooks] = useState([]);
   const [id, setId] = useState('');
-  const [term, setTerm] = useState(false);
+  const [condition, setCondition] = useState(false);
 
   useEffect(() => {
     fetch(
@@ -19,29 +21,30 @@ function App() {
       .then(res => res.json())
       .then(result => {
         setBooks(result.items);
+        toast.success('Books found successfully!');
       })
-      .catch(error => alert(error.message));
+      .catch(error => {
+        alert(error.message);
+        toast.error('Failed to fetch books.');
+      });
   }, [query]);
 
   const getSearch = () => {
     setQuery(search);
     setSearch('');
   };
-
-  const checkIt = id => {
+  const checkBooks = id => {
     setId(id);
-    setTerm(true);
+    setCondition(true);
   };
-
   return (
     <div className="App">
+       <ToastContainer />
       <SearchBooks getSearch={getSearch} search={search} setSearch={setSearch} />
-
-      <Books books={books} checkIt={checkIt} />
-
-      {term ? (
+      <Books books={books} checkBooks={checkBooks} />
+      {condition ? (
         <div className="reading--block">
-          <button className="close--btn" onClick={() => setTerm(false)}>
+          <button className="close--btn" onClick={() => setCondition(false)}>
             X
           </button>
           <iframe

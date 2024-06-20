@@ -1,0 +1,42 @@
+Carousel container
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  
+  .carousel .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel .slide {
+    min-width: 100%;
+    flex: 0 0 auto;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+
+  .carousel .prev,
+  .carousel .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+  }
+  
+  .carousel .prev {
+    left: 10px;
+  }
+  
+  .carousel .next {
+    right: 10px;
+  }
+  
