@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 
 const SearchBooks = ({ getSearch, search, setSearch }) => {
+
   const handleSubmit = e => {
     e.preventDefault();
     if (search !== '') {

@@ -1,14 +1,23 @@
+
+Explanations of the technologies used: 
 1.used Google Api for searching books https://www.googleapis.com/books/v1/volumes?q=${query}&key=AIzaSyCJbUF_JRiOk9R6abyiAZ3QddT6TQ_LAO0 by using ID and checkBooks
-2. used useEffect to communicate with dom and fetch data from API.
-3. used simple Search Query to perform my book search and fetch data .
-4. used getSearch for search query and to set it to current value of search
-5. used checkbooks function to check searh based on id.
-6. used search book component validate search input before triggering search by u sing if condition.
-7.used event handlers like on click and on change.
-8. used Conditional Rendering (ternary operator) to check if book exists by using accesstokenlink key to access value stored in PDF.
-9.used Slice to limit the display of books
-10.  used Iframe element to display book conentent to read online instead of directing book or link to google library . 
-11. scope of improvement in this code: could have used more react hooks, like usereducer to access through arrays and couls use more feature and event handlers for doing more actions like more filtered searches .
+2. used React Framework for Front End And External REST Api's to Fetch my Data 
+3. Used CSS for Styling and HTMl for UI
+
+Explanations of the approach taken:
+1. used useEffect to communicate with dom and fetch data from API.
+2. used simple Search Query to perform my book search and fetch data .
+3. used getSearch for search query and to set it to current value of search
+4. used checkbooks function to check searh based on id.
+5. used search book component validate search input before triggering search by u sing if condition.
+6.used event handlers like on click and on change.
+7. used Conditional Rendering (ternary operator) to check if book exists by using accesstokenlink key to access value stored in PDF.
+8.used Slice to limit the display of books
+9.  used Iframe element to display book conentent to read online instead of directing book or link to google library . 
+10. scope of improvement in this code: could have used more react hooks, like usereducer to access through arrays and couls use more feature and event handlers for doing more actions like more filtered searches . 
+11.Could have used UseReducer for Searching through books for more easy search format. by using actions and payload.
+
+A link to your live site.  Netlify : https://superb-dasik-369f5d.netlify.app/
 
 
 
